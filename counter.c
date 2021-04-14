@@ -41,8 +41,8 @@ int main()
   for (i = 0; i < strlen(buffer); i++) {
     curchar = toupper(buffer[i]);
     if (curchar >= 65 && curchar <= 90) count[curchar - 65]++;
-    if (curchar == ' ') spaces++;
     else other++;
+    if (curchar == ' ') spaces++;
   }
   
   // Create the letter analysis table
@@ -105,6 +105,6 @@ int min(int count[])
       min_pos = i;
       min = count[i];
     }
-  }  
+  } 
   return min_pos;
 }
